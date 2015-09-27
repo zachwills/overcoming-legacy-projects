@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Overcoming Legacy Projects</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Zach Wills">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Overcoming Legacy Projects</h1>
+					<h3>..or 'how to not hate' legacy projects</h3>
+					<p>
+						<small>Created by <a href="http://zachwills.net/">Zach Wills</a> / <a href="http://twitter.com/zachwills">@zachwills</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Hi! I'm Zach Wills.</h2>
+					<h3><a href="http://twitter.com/zachwills">@zachwills</a></h3>
+					<p><img width="300" style="background: white; padding: 5px;" data-src="img/reaktiv-logo-full@2x.png" alt="Reaktiv Studios Lightbulb"></p>
+					<p>
+						<ul>
+							<li>Senior Developer at <a href="http://reaktivstudios.com/">Reaktiv Studios</a></li>
+							<li>WordPress core contributor</li>
+							<li>Netflix binge watcher</li>
+						</ul>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Where do we begin?</h2>
+					<p class="fragment">...from the beginning!</p>
+				</section>
+				<section>
+					<h2>When we first get a project and see that the code isn't what we might have hoped for- what happens?</h2>
+
+					<aside class="notes">We experience something documented heavily by all kinds of scientists..</aside>
+				</section>
+				<section>
+					<section>
+						<h2>5 stages of <span style="text-decoration: line-through">grief</span><br>legacy code</h2>
+						<p><img width="700" data-src="img/5-stages-legacy-code.jpg" alt="Sad woman."></p>
+					</section>
+					<section>
+						<h2>Stage #1: Denial</h2>
+						<p><img width="700" data-src="img/denial.gif" alt="I didn't"></p>
+						<p>"..write/inherit bad code"</p>
+
+						<aside class="notes">There's no way that's the code I have to work with!</aside>
+					</section>
+					<section>
+						<h2>Stage #2: Anger</h2>
+						<p><img width="700" data-src="img/anger2.gif" alt="You suck!"></p>
+						<p>"..at writing code"</p>
+					</section>
+					<section>
+						<h2>Stage #3: Bargaining</h2>
+						<p><img width="700" data-src="img/bargaining.gif" alt="Please please please"></p>
+						<p>"..find a subcontractor to do this"</p>
+					</section>
+					<section>
+						<h2>Stage #4: Depression</h2>
+						<p><img width="600" data-src="img/depression.gif" alt="Sad cat"></p>
+					</section>
+					<section>
+						<h2>Stage #5: Acceptance</h2>
+						<p><img width="700" data-src="img/acceptance.gif" alt="Eminem indifferent"></p>
+						<p>"Gotta do what I've gotta do."</p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Before you go down that road- show some understanding</h2>
+						<h3>consider the following</h3>
+					</section>
+					<section>
+						<h2>Why is the project this way?</h2>
+						<p>
+							<ul>
+								<li class="fragment">Was it worked on by different people with clashing opinions?</li>
+								<li class="fragment">Was there a tight timeline?</li>
+								<li class="fragment">Did it change developers halfway through?</li>
+								<li class="fragment">What kind of pressure was the client / management applying?</li>
+							</ul>
+						</p>
+
+						<aside class="notes">I've personally dealt with this many times in the past. It's pretty much unavoidable to hit some sort of snag- usually with anything but definitely with client projects.</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>We all start somewhere</h2>
+					</section>
+					<section>
+						<h2>Challenge time!</h2>
+						<ol> 
+							<li class="fragment">Think about your code from 6-12 months ago.</li>
+							<li class="fragment">Raise your hand if it's the best code you can write.</li>
+							<li class="fragment">Everyone look around at all the LIARS! ;)</li>
+						</ol>
+
+						<aside class="notes">Try to get it in front of the code audit panel that's coming up next.</aside>
+					</section>
+					<section>
+						<h2>Here is something that's really important for you to remember:</h2>
+					</section>
+					<section>
+						<h2>YOU, at some point, were the developer responsible for a legacy project that someone is now inheriting.</h2>
+
+						<aside class="notes">
+							<p>Yes- all those stages of grief legacy code you had to endure is currently being endured by another developer that took over a project you either worked on or finished.</p>
+						</aside>
+					</section>
+					<section data-background="img/mind-blown.gif"></section>
+					<section>
+						<h2>It's the circle of life!</h2>
+						<p>
+							<img width="700" src="img/circle-of-life.gif" alt="" />
+						</p>
+					</section>
+					<section>
+						<h2>The time to overcome legacy projects is... <span class="fragment">now!</span></h2>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Getting started</h2>
+					</section>
+					<section>
+						<h2>0. Version control this thing!</h2>
+						<p class="fragment">Make changes without worrying about losing the current code.</p>
+					</section>
+					<section>
+						<h2>1. Coding Standards</h2>
+					</section>
+					<section>
+						<h2>Why do we care about coding standards?</h2>
+						<ul>
+							<li class="fragment">
+								They will
+								<ul>
+									<li class="fragment">make it easier to identify chunks of legacy code down the line</li>
+									<li class="fragment">make it easier to know what to refactor</li>
+									<li class="fragment">prevent you from writing new legacy code</li>
+									<li class="fragment">make onboarding new developers to the project easier</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>What are the types of things I should standardize?</h2>
+					</section>
+					<section>
+						<h2>Naming things</h2>
+						<ul>
+							<li class="fragment">
+								PHP / JavaScript
+								<ul>
+									<li class="fragment">camelCase vs snake_case</li>
+									<li class="fragment">how_verbose_will_function_names_be()?</li>
+									<li class="fragment">file names (class-*.php?)</li>
+								</ul>
+							</li>
+
+							<li class="fragment">
+								(S)CSS
+								<ul>
+									<li class="fragment">class names (bem, acss, etc)</li>
+									<li class="fragment">folder structure (components, pages, objects, oh my!)</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<blockquote>There are only two hard things in Computer Science: cache invalidation and naming things.</blockquote>
+						<small>- Phil Karlton</small>
+					</section>
+					<section>
+						<h2>Where does new code go?</h2>
+						<ul>
+							<li class="fragment">
+								What do you do with...
+								<ul>
+									<li class="fragment">new functions (PHP, JavaScript, Sass)?</li>
+									<li class="fragment">new classes (PHP, CSS)?</li>
+								</ul>
+							</li>
+
+							<aside class="notes">More time than I'd like to admit is spent thinking about how the code is write is going to be organized in the project.</aside>
+						</ul>
+					</section>
+					<section>
+						<h2>How does new code look?</h2>
+						<ul>
+							<li class="fragment">code formatting</li>
+							<li class="fragment">tabs vs spaces</li>
+							<li class="fragment">trailing whitespace</li>
+							<li class="fragment">indenting key value pairs in arrays</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Commenting</h2>
+						<ul>
+							<li class="fragment">All functions should have DocBlocks that explain what the function does and what the parameters do / are<hr></li>
+							<li class="fragment">All classes should have a comment before they get defined explaining what they do<hr></li>
+							<li class="fragment">All files (PHP, JavaScript, CSS) should have a comment at the top that explains (briefly) what the file contains<hr></li>
+							<li class="fragment">CSS should be commented to explain why certain styles might need to be there, or at least what the specific component that we are about to style is doing / represents<hr></li>
+						</ul>
+
+						<aside class="notes">Commenting is extremely valuable. I recently had a project where I had to change a dropdown, so I did a search in the project, found where it matched, made the change, and nothing happened. I checked build processes, file names, etc and it looked like where I was supposed to make the change. As it turns out, the file I was working in was, at some point, the right place. However, now the file holding the right code (copy/pasted) was somewhere else. I went ahead and added a comment to the old file to point future developers in the right direction if they ever have to make that change.</aside>
+					</section>
+					<section>
+						<h2>PHP Comment Example</h2>
+						<pre>
+							<code>
+/**
+ * Get the user role display name.
+ *
+ * @param  int|object $user User ID or object you want to get role display name.
+ * @return string
+ */
+function acme_get_user_role_name( $user ) {
+	if ( ! $user instanceof \WP_User ) {
+		$user = new WP_User( $user );
+	}
+
+	if ( ! isset( $user->roles[0] ) ) {
+		return;
+	}
+
+	global $wp_roles;
+
+	$role_slug = $user->roles[0];
+	$role      = $wp_roles->roles[ $role_slug ]['name'];
+	
+	return $role;
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>SCSS Comment Example</h2>
+						<pre>
+							<code>
+/**
+ * Footer
+ *
+ * Holds the main footer styles. More specific nav patterns can be their own
+ * components.
+ */
+
+/**
+ * Site footer conainer.
+ *
+ * Used so we can set set a bg color that will spread across the full width of
+ * the site.
+ */
+.site-footer {
+	@include padding( 1, vertical );
+	background: color( darker-gray );
+	color: white;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+/**
+ * Wrapper inside of the footer container.
+ *
+ * Used so we can set a width on the footer but have a bg color across the full
+ * width of the site.
+ */
+.site-footer__inner {
+	@include max-container();
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>What standards should I follow?</h2>
+						<ul>
+							<li class="fragment">PHP: <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/">WordPress PHP Coding Standards</a></li>
+							<li class="fragment">JavaScript: <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/javascript/">WordPress JavaScript Coding Standards</a></li>
+							<li class="fragment">(S)CSS: <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/">WordPress CSS Coding Standards</a> & <a href="http://sass-guidelin.es/">Sass Guidelines</a> (my personal recommendation)</li>
+							<li class="fragment">PHP CodeSniffer and JSHint make sticking to these standards WAY easier</li>
+							<li class="fragment">Comments: <a href="https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/">WordPress Documentation Standards</a></li>
+
+							<aside class="notes">Tools like PHP CodeSniffer and JSHint can be configured with your editor to automatically scan your code as you save it and highlight any errors / issues automatically.</aside>
+						</ul>
+					</section>
+					<section>
+						<h2>Now that your standards are defined...</h2>
+					</section>
+					<section>
+						<h2>DON'T LET BAD CODE GET THROUGH!</h2>
+					</section>
+					<section>
+						<h2>Defining code standards means NOTHING if you don't stick to them.</h2>
+					</section>
+					<section>
+						<h2>How can I make sure the project code stays in line with these newly defined standards?</h2>
+					</section>
+					<section>
+						<h2>Review all new code added to the repository</h2>
+						<ul>
+							<li class="fragment">
+								If you're on a team
+								<ul>
+									<li class="fragment">Implement team code reviews</li>
+									<li class="fragment">ex: make a PR for whatever work feature you just completed and notify your team so they can review it and merge it if it is good to go</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Review all new code added to the repository</h2>
+						<ul>
+							<li>
+								If you're freelancing / independent / flying solo
+								<ul>
+									<li class="fragment">Implement solo code reviews so you double check your own work.</li>
+									<li class="fragment">Review it in GitHub or Bitbucket or other.</li>
+									<li class="fragment">Seeing the code in a different environment might even make it easier to spot when certain things don’t end up right.</li>
+									<li class="fragment">ex: make a PR for whatever work feature you just completed and notify yourself to review it and merge it if it is good to go</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>2. Testing your code</h2>
+					</section>
+					<section>
+						<h2>Why write tests for your code?</h2>
+						<ul>
+							<li class="fragment">Tests will give you a better understanding of the code base you're working with.</li>
+							<li class="fragment">In the future, when you are refactoring, you will be able to run those tests and know that everything is ok.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Write tests for all new code you write, and plan to write them for all the legacy code that gets refactored.</h2>
+					</section>
+					<section>
+						<h2>Unit testing</h2>
+						<blockquote class="fragment">Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently scrutinized for proper operation. Unit testing is often automated but it can also be done manually.</blockquote>
+						<small class="fragment"><a href="http://searchsoftwarequality.techtarget.com/definition/unit-testing">http://searchsoftwarequality.techtarget.com/definition/unit-testing</a></small>
+					</section>
+					<section>
+						<h2>When it comes to testing legacy code, unit testing can be difficult (usually not impossible!)</h2>
+
+						<aside class="notes">Things might be get/set globally, which can be hard to account for.</aside>
+					</section>
+					<section>
+						<h2>Writing unit tests for legacy code</h2>
+						<p class="fragment">If you want to write unit tests for the legacy code, try to find the chunks of code (if any) that actually can be tested. depending on the kind of code you’re dealing with- you might not be able to unit test it without refactoring.</p>
+					</section>
+					<section>
+						<h2>Unit tests aren't the only kinds of tests at your disposal.</h2>
+					</section>
+					<section>
+						<h2>What about acceptance tests?</h2>
+					</section>
+					<section>
+						<h2>From Codeception..</h2>
+						<blockquote>Acceptance tests can cover standard but complex scenarios from a user's perspective. With acceptance tests you can be confident that users, following all defined scenarios, won't get errors.</blockquote>
+
+						<aside class="notes">
+							Codeception: BDD PHP testing framework. Think about how the end user uses the site: they click something, see something, boom- it works! That's how acceptance testing works!
+						</aside>
+					</section>
+					<section>
+						<h2>Quick Codeception example</h2>
+						<p><small>from the Codeception site</small></p>
+						<pre>
+							<code data-trim>
+$I = new AcceptanceTester($scenario);
+$I->wantTo('create wiki page');
+$I->amOnPage('/');
+$I->click('Pages');
+$I->click('New');
+$I->see('New Page');
+$I->fillField('title', 'Hobbit');
+$I->fillField('body', 'By Peter Jackson');
+$I->click('Save');
+$I->see('page created'); // notice generated
+$I->see('Hobbit','h1'); // head of page of is our title
+$I->seeInCurrentUrl('pages/hobbit'); 
+$I->seeInDatabase('pages', array('title' => 'Hobbit'));
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Acceptance testing is GREAT for legacy applications</h2>
+						<ul>
+							<li class="fragment">It doesn’t matter how the code is written- what matters is what the result in the browser or database is.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>By combining acceptance and unit tests, you can:</h2>
+						<ol>
+							<li class="fragment">Refactor legacy code</li>
+							<li class="fragment">Write unit tests</li>
+							<li class="fragment">Run existing acceptance tests to make sure the newly refactored code didn’t change any end user output</li>
+							<li class="fragment">Conquer the world</li>
+						</ol>
+					</section>
+					<section data-background="img/excited.gif">
+						<h2>I like the sound of that!</h2>
+					</section>
+					<section>
+						<h2>3. Documentation</h2>
+					</section>
+					<section>
+						<h2>Why do more than inline comments?</h2>
+						<p class="fragment">By creating detailed documentation, you'll get a much clearer idea of what the existing spaghetti code is doing as well as a great reference for new team members (and yourself) in the future.</p>
+					</section>
+					<section>
+						<h2>Document ALL THE THINGS</h2>
+						<p class="fragment">When in doubt, document it out!</p>
+						<ul>
+							<li class="fragment">Add inline documentation that you can auto generate it into docs using tools like <a href="http://www.apigen.org/">ApiGen</a>.</li>
+							<li class="fragment">Create written out documentation that details the flow of certain files, functions, or chunks of the site.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>How you document your code matters!</h2>
+					</section>
+					<section>
+						<h2>That's why your project needs documentation standards- not unlike the coding standards we talked about earlier.</h2>
+					</section>
+					<section>
+						<h2>With <span class="fragment">legacy project knowledge</span> comes <span class="fragment">refactoring power</span>.</h2>
+					</section>
+					<section>
+						<h2>Use that power to</h2>
+						<ul>
+							<li class="fragment">Identify the pieces of legacy code that are ready for unit tests</li>
+							<li class="fragment">Determine what sections need the most refactoring</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Try to do everything we covered!</h2>
+						<p>Some of what we covered is better than none of it- but if you really want to get a handle on your legacy projects, there is no better way than following the steps outlined!</p>
+					</section>
+					<section>
+						<h2>Uhh.. what were those steps again?</h2>
+						<ul>
+							<li class="fragment">0. Version control</li>
+							<li class="fragment">1. Set standards</li>
+							<li class="fragment">2. Test your code</li>
+							<li class="fragment">3. Document everything</li>
+						</ul>
+					</section>
+					<section>
+						<h2>BUT WAIT THERES MORE!</h2>
+						<p class="fragment">There is one more step- and this one is the most important..</p>
+					</section>
+				</section>
+			
+				<section data-background="img/just-do-it.gif">
+					<h2>JUST DO IT!!</h2>
+				</section>
+				
+				<section>
+					<h2>Time for Q&A!</h2>
+				</section>
+
+				<section>
+					<h2>Thanks for coming to my talk!</h2>
+						<p>PS: follow me on Twitter: <a href="http://twitter.com/zachwills">@zachwills</a></p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
